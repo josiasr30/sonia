@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi persona favorita</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #4a4a4a;
+            padding: 10px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #d81b60;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .photo-frame {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            border: 8px solid #f8bbd0;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f3f3;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .photo-frame:hover img {
+            transform: scale(1.2) rotate(3deg);
+        }
+
+        .message {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .heart {
+            color: #e91e63;
+            font-size: 45px;
+            animation: beat 1s infinite;
+            display: inline-block;
+            margin: 15px 0;
+        }
+
+        /* --- ESTILOS PARA EL VIDEO RESPONSIVE --- */
+        video {
+            width: 100%;        /* Ocupa todo el ancho del contenedor */
+            height: auto;       /* Mantiene la proporción */
+            border-radius: 15px; /* Bordes redondeados para que combine */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- MEDIA QUERIES PARA MÓVILES --- */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .photo-frame {
+                width: 180px;
+                height: 180px;
+            }
+
+            .message {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Para Ti Sonia❤️</h1>
+        
+        <div class="photo-frame">
+            <img src="sonia.jpeg" alt="Tú y yo">
+        </div>
+
+        <div class="message">
+            <p>"Desde que llegaste a mi vida, cada momento a tu lado es espcial. Gracias por ser mi compañera, mi confidente y mi alegría 
+                de todos los días.      <br> "TE AMO SONIA"</p>
+            <p><strong>Eres lo más bonito que me ha pasado.</strong></p>
+        </div>
+
+        <div class="heart">❤</div>
+
+        <video controls>
+            <source src="Gondwana.mp4" type="video/mp4">
+            <source src="videos/mi-video.webm" type="video/webm">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+
+    </div>
+
+</body>
+</html>
